@@ -3,304 +3,435 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hiring: Mobile Developer (React Native / Flutter) | >20 LPA</title>
+  <title>Kunal Rai | Lead React Native Developer Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #6366f1;
-      --primary-dark: #4f46e5;
-      --accent: #10b981;
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --border: #334155;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --radius: 10px;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 16px;
-      background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--slate-800);
+      line-height: 1.6;
+      padding: 32px 16px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .card {
-      background: var(--card-bg);
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      width: 100%;
-      max-width: 600px;
-      padding: 36px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
     }
 
-    .badge-fast {
+    .action-bar {
+      background: var(--slate-900);
+      color: var(--white);
+      padding: 12px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .badge-status {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       background: rgba(16, 185, 129, 0.15);
       color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 6px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
-      font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #fff 40%, var(--text-muted));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .description {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-
-    .highlights {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .highlight-box {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border);
-      padding: 14px;
-      border-radius: 10px;
-    }
-
-    .highlight-box .label {
       font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 4px;
     }
 
-    .highlight-box .value {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
+    .badge-status::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
     }
 
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 28px 0;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    label {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    input, select, textarea {
-      width: 100%;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 14px;
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    button.btn-submit {
-      margin-top: 10px;
+    .btn-print {
       background: var(--primary);
-      color: #fff;
+      color: var(--white);
       border: none;
-      padding: 14px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
       cursor: pointer;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: background 0.2s, transform 0.1s;
+      gap: 6px;
+      transition: background 0.2s;
     }
 
-    button.btn-submit:hover {
+    .btn-print:hover {
       background: var(--primary-dark);
     }
 
-    button.btn-submit:active {
-      transform: scale(0.99);
+    .resume-body {
+      padding: 40px 48px;
     }
 
-    .success-message {
-      display: none;
-      text-align: center;
-      padding: 30px 10px;
+    .header {
+      border-bottom: 2px solid var(--slate-100);
+      padding-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    .success-message h2 {
-      font-size: 1.5rem;
-      color: #34d399;
+    .header-name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .header-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 6px;
+    }
+
+    .contact-grid {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 0.9rem;
+      color: var(--slate-600);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item a {
+      color: var(--slate-700);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+      stroke: var(--primary);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .summary-text {
+      color: var(--slate-700);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .summary-text strong {
+      color: var(--slate-900);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .skill-category {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--slate-900);
       margin-bottom: 8px;
     }
 
-    .success-message p {
-      color: var(--text-muted);
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
     }
 
-    @media (max-width: 500px) {
-      .card { padding: 24px 20px; }
-      .highlights { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+    .tag {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      color: var(--slate-700);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+
+    .tag.highlight {
+      background: var(--primary-light);
+      border-color: #bfdbfe;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .job-item {
+      margin-bottom: 26px;
+    }
+
+    .job-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .job-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .job-period {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    .job-company {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .job-client {
+      color: var(--slate-600);
+      font-weight: 500;
+    }
+
+    .job-bullets {
+      list-style-type: none;
+    }
+
+    .job-bullets li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: var(--slate-700);
+      line-height: 1.6;
+    }
+
+    .job-bullets li::before {
+      content: "▪";
+      position: absolute;
+      left: 2px;
+      color: var(--primary);
+      font-size: 1rem;
+      top: -1px;
+    }
+
+    .job-bullets li strong {
+      color: var(--slate-900);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--white);
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .project-tech {
+      font-size: 0.78rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .dual-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .edu-item {
+      font-size: 0.9rem;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .edu-meta {
+      color: var(--slate-600);
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+        padding: 0;
+        color: #000;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+        margin: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-body {
+        padding: 0;
+      }
+      .section {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+      }
+      .btn-print {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-body {
+        padding: 24px 20px;
+      }
+      .header-name {
+        font-size: 1.8rem;
+      }
+      .skills-grid, .projects-grid, .dual-col {
+        grid-template-columns: 1fr;
+      }
+      .action-bar {
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <!-- Header -->
-    <div id="content-block">
-      <div class="badge-fast">⚡ Direct Intro to Founder in &lt;24 hrs</div>
-      <h1>Mobile Developer (React Native / Flutter)</h1>
-      <p class="description">
-        We're looking for an experienced mobile engineer to build and scale high-performance apps. Skip the recruiter screenings—fill out the form below to connect directly with the founder.
-      </p>
-
-      <!-- Key Stats -->
-      <div class="highlights">
-        <div class="highlight-box">
-          <div class="label">Compensation</div>
-          <div class="value">> 20 LPA</div>
-        </div>
-        <div class="highlight-box">
-          <div class="label">Location</div>
-          <div class="value">📍 Bangalore, India</div>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Application Form -->
-      <form id="apply-form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp *</label>
-            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="framework">Primary Expertise *</label>
-            <select id="framework" name="framework" required>
-              <option value="" disabled selected>Select Framework</option>
-              <option value="React Native">React Native</option>
-              <option value="Flutter">Flutter</option>
-              <option value="Both">Both (React Native & Flutter)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="exp">Total Experience *</label>
-            <select id="exp" name="exp" required>
-              <option value="" disabled selected>Select Experience</option>
-              <option value="2-4 years">2 - 4 Years</option>
-              <option value="4-6 years">4 - 6 Years</option>
-              <option value="6+ years">6+ Years</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="portfolio">GitHub / App Store / Play Store Links *</label>
-          <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/yourhandle or live app link" required>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="ctc">Current CTC (LPA)</label>
-            <input type="text" id="ctc" name="ctc" placeholder="e.g. 15 LPA">
-          </div>
-          <div class="form-group">
-            <label for="notice">Notice Period</label>
-            <input type="text" id="notice" name="notice" placeholder="Immediate / 15 / 30 days">
-          </div>
-        </div>
-
-        <button type="submit" class="btn-submit">
-          Submit Application & Get Intro 🚀
-        </button>
-      </form>
+  <div class="container">
+    <!-- Top Action Bar -->
+    <div class="action-bar">
+      <div class="badge-status">Ready for React Native / Mobile Roles</div>
+      <button class="btn-print" onclick="window.print()">
+        <svg class="contact-icon" style="stroke: #ffffff;" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print / Save PDF
+      </button>
     </div>
 
-    <!-- Success Message (Shown on Submit) -->
-    <div id="success-block" class="success-message">
-      <h2>🎉 Application Received!</h2>
-      <p>Thanks for applying. We will review your links and introduce you directly to the founder within 24 hours.</p>
-    </div>
-  </div>
+    <div class="resume-body">
+      <!-- Header -->
+      <header class="header">
+        <h1 class="header-name">Kunal Rai</h1>
+        <div class="header-title">Lead React Native Developer | Mobile Solutions Architect</div>
 
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('content-block').style.display = 'none';
-      document.getElementById('success-block').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:ikunalrai@gmail.com">ikunalrai@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+91 9911566229</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="
+                                                                                                                            
